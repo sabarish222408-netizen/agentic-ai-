@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #050816;
+
+    color: rgb(255, 255, 255);
+
+    min-height: 100vh;
+}
+
+
+#three-bg {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+}
+
+
+/* HEADER */
+
+header {
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 6%;
+
+    border-bottom: 1px solid
+        rgba(255,255,255,0.1);
+
+    background:
+        rgba(22, 5, 16, 0.75);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+
+    opacity: .6;
+}
+
+
+.connection {
+
+    font-size: 13px;
+
+    opacity: .8;
+}
+
+
+/* MAIN */
+
+main {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+
+    padding: 80px 0 50px;
+
+    text-align: center;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(
+        40px,
+        6vw,
+        75px
+    );
+
+    line-height: 1.05;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    opacity: .6;
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #a8aec2;
+
+    line-height: 1.7;
+}
+
+
+/* WORKSPACE */
+
+.workspace {
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    gap: 25px;
+}
+
+
+.card {
+
+    padding: 28px;
+
+    background:
+        rgba(10,15,35,.78);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(20px);
+}
+
+
+.card-title {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+
+.card-title span {
+
+    opacity: .4;
+}
+
+
+label {
+
+    display: block;
+
+    margin: 18px 0 8px;
+
+    color: #aeb5ca;
+
+    font-size: 14px;
+}
+
+
+textarea {
+
+    width: 100%;
+
+    min-height: 120px;
+
+    resize: vertical;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid
+        rgba(255,255,255,.1);
+
+    background: #080d20;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+textarea:focus {
+
+    border-color:
+        rgba(255,255,255,.35);
+}
+
+
+button {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #080b18;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: .9;
+}
+
+
+/* AGENT STEPS */
+
+.agent-step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    transition: .3s;
+}
+
+
+.agent-step b {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size: 12px;
+}
+
+
+.agent-step strong {
+
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.agent-step small {
+
+    color: #888fa5;
+
+    margin-top: 4px;
+
+    display: block;
+}
+
+
+.agent-step.active {
+
+    border-color:
+        rgba(255,255,255,.4);
+
+    transform: translateX(5px);
+}
+
+
+.agent-step.done {
+
+    opacity: .8;
+}
+
+
+/* RESULT */
+
+.result-section {
+
+    margin: 40px 0 100px;
+}
+
+
+.result-section h2 {
+
+    margin-bottom: 20px;
+}
+
+
+.result-card {
+
+    background:
+        rgba(10,15,35,.8);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.status {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size: 12px;
+
+    margin: 10px 0;
+}
+
+
+.claim {
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border-radius: 12px;
+}
+
+
+.claim h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+
+.claim p {
+
+    color: #adb3c5;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+    .workspace {
+
+        grid-template-columns: 1fr;
+    }
+
+    header {
+
+        padding: 0 4%;
+    }
+
+    .hero {
+
+        padding-top: 50px;
+    }
+}
